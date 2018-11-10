@@ -1,0 +1,6 @@
+1. sudo apt-get update
+2. sudo apt-get install vim
+3. sudo apt-get install curl vim exuberant-ctags git ack-grep
+4. sudo pip install pep8 flake8 pyflakes isort yapf
+5. type 'cd' cmd and add .vimrc file
+6. git config --global core.editor "vim"
