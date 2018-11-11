@@ -4,3 +4,5 @@
 4. sudo pip install pep8 flake8 pyflakes isort yapf
 5. type 'cd' cmd and add .vimrc file
 6. git config --global core.editor "vim"
+7. git config --global user.name 'type your name'
+8. git config --global user.email 'type your email'
