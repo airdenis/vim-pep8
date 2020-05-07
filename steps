@@ -7,3 +7,31 @@
 7. git config --global core.editor "vim"
 8. git config --global user.name 'type your name'
 9. git config --global user.email 'type your email'
+10. sudo apt-get install tmux
+11. sudo apt-get install wmctrl
+12. add to ~/.bashrc file:
+  * alias ll='ls -alF'                                                                                                                      
+  * alias la='ls -A'                                                                                                                        
+  * alias l='ls -CF'                                                                                                                        
+  * alias dc='docker-compose'                                                                                                               
+  * alias m='dc exec web ./manage.py'                                                                                                       
+  * alias t='m test'                                                                                                                        
+  * alias 'project-name'='cd ~/{{project location}}'                                                                                     
+  * alias gfull='git log --oneline --decorate --graph'                                                                                                                                                                              
+  * alias python='python3'                                                                                                                  
+  * alias tm='wmctrl -r :ACTIVE: -b toggle,maximized_vert,maximized_horz && tmux new-session\; split-window -h\; split-window -h\; select-layout even-horizontal\; split-window -v\; split-window -v'  
+13. make terminal prompt shoreter by modifing the ~/.bashrc file:
+    In your ~/.bashrc, find the following section:
+      if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+      else
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+      fi
+    Remove the @\h so that it becomes:
+      if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+      else
+        PS1='${debian_chroot:+($debian_chroot)}\u:\w\$ '
+      fi
+    Save, exit, close terminal and start another to see the result.
+ 14. uncomment #force_color_prompt=yes in ~/.bashrc file to make prompt colored inside tmax window.
