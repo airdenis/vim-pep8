@@ -18,3 +18,4 @@
   * alias dc='docker-compose'  
   * alias m='dc exec web ./manage.py'
   * alias t='m test'
+  * alias wr='dc stop && dc rm -f web && dc build web && dc up -d'
